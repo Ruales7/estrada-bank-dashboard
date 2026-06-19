@@ -1,0 +1,48 @@
+/* Importação da fonte (Mantida, mas idealmente configurada no HTML ou Next.js/React) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Diretivas fundamentais do Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Customização global da barra de rolagem usando as variáveis de tema do Tailwind */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    /* Usa a cor do fundo principal definida no tailwind.config.js */
+    background: theme('colors.fundo-principal');
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.gray.800');
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    /* Toque neon sutil ao interagir com o scroll */
+    background: theme('colors.verde-primario'); 
+  }
+}
+
+@layer utilities {
+  /* Criando classes utilitárias específicas para o projeto (Glassmorphism e Neon)
+    Em vez de escrever CSS puro, usamos o @apply para agrupar classes do Tailwind 
+  */
+  
+  .glass-panel {
+    @apply bg-fundo-cartao backdrop-blur-md border border-gray-700/50 shadow-2xl;
+  }
+
+  .text-neon-glow {
+    text-shadow: 0 0 10px rgba(0, 229, 160, 0.4), 0 0 20px rgba(0, 229, 160, 0.2);
+  }
+
+  .box-neon-glow {
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05), 0 0 15px rgba(0, 229, 160, 0.15);
+  }
+}
