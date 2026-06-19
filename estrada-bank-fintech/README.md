@@ -16,4 +16,4 @@ Basta abrir o arquivo `index.html` no navegador.
 
 ## GitHub
 Depois de publicar o projeto em um repositório público, cole aqui o link final para entrega:
-`COLE_AQUI_O_LINK_DO_REPOSITORIO`
+`https://github.com/Ruales7/estrada-bank-dashboard`
